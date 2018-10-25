@@ -1,0 +1,12 @@
+<view class="intro">
+    <scroll-view scrollY bindscroll="scroll" scrollIntoView="{{toView}}" scrollTop="{{scrollTop}}" style="height: 100%;">
+        <view class="intro_image_box">
+            <image class="intro_image" height="150" src="{{url}}" width="355"></image>
+        </view>
+        <view class="author">作者:{{author}}</view>
+        <view class="content">{{content}}</view>
+        <view class="btn-area">
+            <button class="about_btn fs28" openType="contact">联系开发者</button>
+        </view>
+    </scroll-view>
+</view>

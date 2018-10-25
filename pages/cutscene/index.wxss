@@ -1,0 +1,22 @@
+page {
+    background: #1a2d27;
+}
+
+.cropper-footer {
+}
+
+.finish {
+    height: 50px;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.finish image {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}

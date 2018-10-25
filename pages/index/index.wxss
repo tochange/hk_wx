@@ -1,0 +1,85 @@
+page {
+    background: #1a2d27;
+}
+
+.swiper_box {
+    width: 512rpx;
+    height: 512rpx;
+    margin-left: 120rpx;
+    margin-top: 80rpx;
+}
+
+.swiper_box image {
+    width: 512rpx;
+    height: 512rpx;
+}
+
+.loading {
+    width: 512rpx;
+    height: 512rpx;
+    margin-left: 120rpx;
+    margin-top: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading image {
+    width: 55rpx;
+    height: 55rpx;
+}
+
+.slide-image {
+    width: 512rpx;
+    height: 512rpx;
+}
+
+.takephoto {
+    width: 314rpx;
+    height: 94rpx;
+    font-size: 36rpx;
+    color: #ffffff;
+    margin: 0 auto;
+    margin-top: 100rpx;
+    border: 2px solid #8da8a1;
+    text-align: center;
+    line-height: 94rpx;
+    display: flex;
+}
+
+.album {
+    width: 54rpx;
+    height: 54rpx;
+    margin-top: 20rpx;
+    margin-left: 40rpx;
+    display: flex;
+}
+
+.zan {
+    width: 54rpx;
+    height: 54rpx;
+    margin-top: 20rpx;
+    margin-left: 30rpx;
+}
+
+.zanshang {
+    width: 314rpx;
+    height: 94rpx;
+    font-size: 36rpx;
+    color: #ffffff;
+    margin: 0 auto;
+    margin-top: 40rpx;
+    border: 2px solid #8da8a1;
+    text-align: center;
+    line-height: 94rpx;
+    display: flex;
+}
+
+.about_us {
+    font-size: 28rpx;
+    color: #ffffff;
+    position: fixed;
+    bottom: 56rpx;
+    left: 292rpx;
+    border-bottom: 1px solid #ffffff;
+}

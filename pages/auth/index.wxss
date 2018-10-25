@@ -1,0 +1,30 @@
+page {
+    background: #ffffff;
+}
+
+.icon-box-img {
+    width: 60rpx;
+    margin-left: 300rpx;
+    margin-top: 100rpx;
+}
+
+.tips {
+    text-align: center;
+    width: 550rpx;
+    margin-left: 100rpx;
+    color: #959595;
+    font-size: 28rpx;
+    margin-top: 40rpx;
+}
+
+.sure {
+    width: 80%;
+    margin-top: 40rpx;
+}
+
+.tips2 {
+    text-align: center;
+    color: red;
+    font-size: 24rpx;
+    margin-top: 40rpx;
+}

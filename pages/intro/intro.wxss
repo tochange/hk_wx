@@ -1,0 +1,54 @@
+page {
+    min-height: 100%;
+    background: #1a2d27;
+    font-size: 28rpx;
+    color: #fff;
+}
+
+.intro {
+    min-height: 100%;
+    margin-left: 50rpx;
+    margin-right: 50rpx;
+}
+
+.intro_top {
+    width: 512rpx;
+    height: 512rpx;
+}
+
+.intro_image_box {
+    width: 512rpx;
+    height: 512rpx;
+    margin-left: 70rpx;
+    margin-top: 80rpx;
+}
+
+.intro_image {
+    width: 512rpx;
+    height: 512rpx;
+}
+
+.author {
+    text-align: center;
+    font-size: 30rpx;
+    margin-bottom: 15rpx;
+}
+
+.content {
+    margin-bottom: 20rpx;
+    line-height: 50rpx;
+    font-size: 28rpx;
+    color: #fff;
+}
+
+.about_btn {
+    width: 230rpx;
+    text-align: center;
+    border: 4px solid #8da8a1;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+    color: #fff;
+    background: #1a2d27;
+    font-size: 28rpx;
+}

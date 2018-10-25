@@ -1,0 +1,29 @@
+<view class="header_box" style="background:#1a2d27;">
+    <image bindtap="preview_img" class="img_box" mode="aspectFit" src="{{paintInfo.full_url}}" style="margin-top:{{headimgtop}}px;height:{{img_box_height}}px"></image>
+</view>
+<view class="foot_box">
+    <button class="share_friends share_1" openType="share">
+        <image class="share_img" src="/pages/images/icon/share.png"></image>
+        分享好友
+    </button>
+    <button bindtap="saveablum" class="share_friends share_1">
+        <image class="share_img1" src="/pages/images/icon/download.png"></image>
+        保存相册
+    </button>
+    <button bindtap="onemore" class="share_friends share_1" wx:if="{{paintInfo.isme==1}}">
+        <image class="share_img1" src="/pages/images/icon/plus.png"></image>
+        再来一张
+    </button>
+    <button bindtap="onemore" class="share_friends share_1" wx:else>
+        <image class="share_img1" src="/pages/images/icon/plus.png"></image>
+        我也制作
+    </button>
+    <view bindtap="backToIndex" class="backToIndex" style="border-bottom:1px solid #ffffff;" wx:if="{{type=='share'}}">
+        访问加画框
+    </view>
+    <view bindtap="open" class="backToIndex" style="border-bottom:1px solid #ffffff;" wx:if="{{type!='share'}}">
+        赞赏开发者
+    </view>
+    <canvas canvasId="saveCanvas" style="width: {{save_width}}px; height: {{save_height}}px;position:absolute;top:-{{save_height*10}}px;"></canvas>
+    <canvas canvasId="shareCanvas" style="width: {{share_width}}px; height: {{share_height}}px;position:absolute;top:-{{share_height*10}}px;"></canvas>
+</view>

@@ -1,0 +1,26 @@
+<view class="about_wrapper">
+    <view class="about_top">
+        <image class="about_top_img" mode="widthFix" src="/pages/images/about_us_top.png"></image>
+    </view>
+    <view class="about_content">
+        <view class="about_title">
+            <image class="about_title_icon" mode="widthFix" src="/pages/images/about_rectangle.png"></image>
+            <text class="about_title_text fs28">关于加画框</text>
+        </view>
+        <view class="about_text fs28">正所谓三分画七分裱，形容的就是一个好画框能为艺术作品大幅度增色。加画框一款画框在线选择预览工具，方便给画爱好者们进行画框选择提升作品艺术品质。</view>
+        <view class="about_title">
+            <image class="about_title_icon" mode="widthFix" src="/pages/images/about_rectangle.png"></image>
+            <text class="about_title_text fs28">关于闪退问题</text>
+        </view>
+        <view class="about_text fs28">个别安卓手机在裁剪页面点击下一步时会出现闪
+退情况，这是由于官方技术接口性能较差，导致
+内存不足。解决方案是上传小一点尺寸的图片或
+释放下手机内存，就能使用，不便之处还请谅解！</view>
+        <view class="about_title">
+            <image class="about_title_icon" mode="widthFix" src="/pages/images/about_rectangle.png"></image>
+            <text class="about_title_text fs28">开发者答疑</text>
+        </view>
+        <view class="about_text about_text1 fs28">在小程序的使用上如果你遇到任何问题，或者想 对我提出建议或加入交流群，请点击下方按钮获 取开发者微信个人微信号。</view>
+        <button bindtap="copyContact" class="about_btn fs28">开发者微信</button>
+    </view>
+</view>

@@ -1,0 +1,5 @@
+@import "../../vendor/welCropper/welCropper.wxss";
+
+page {
+    background: #1a2d27;
+}

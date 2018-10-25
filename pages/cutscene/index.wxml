@@ -1,0 +1,9 @@
+<view class="cropper-wrapper {{cutImage}}">
+    <canvas bindtouchend="touchEnd" bindtouchmove="touchMove" bindtouchstart="touchStart" canvasId="{{cropperOpt.id}}" class="cropper  {{cutImage}}" disableScroll="true" style="width:{{cropperOpt.width}}px;height:{{cropperOpt.height}}px;"></canvas>
+    <view class="cropper-footer ">
+        <view bindtap="finishCropperImage" class="finish">
+            完成
+            <image src="/pages/images/icon2.png"></image>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+page {
+    font-size: 12px;
+    font-family: arial,'Hiragino Sans GB','Microsoft Yahei','微软雅黑','宋体',\5b8b\4f53,Tahoma,Arial,Helvetica,STHeiti;
+}
+
+page {
+    color: #000;
+    overflow-y: scroll;
+    overflow: -moz-scrollbars-vertical;
+}
+
+.no_more {
+    text-align: center;
+    font-size: 28rpx;
+    padding: 20rpx 0;
+    clear: both;
+}

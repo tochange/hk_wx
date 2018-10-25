@@ -1,0 +1,19 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/addframe/addframe",
+        "pages/share/share",
+        "pages/intro/introAdd",
+        "pages/camera/camera",
+        "pages/cut/cut",
+        "pages/feeback/feeback",
+        "pages/intro/intro",
+        "pages/cutscene/index",
+        "pages/auth/auth",
+        "pages/auth/index"
+    ],
+    "networkTimeout": {
+        "request": 10000,
+        "downloadFile": 10000
+    }
+}

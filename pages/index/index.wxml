@@ -1,0 +1,14 @@
+<view>
+    <view class="{{loadComplete?'swiper_box':'loading'}}">
+        <image bindload="imageLoad" bindtap="previewImg" src="{{loadComplete?srcImagePath:defaultImagePath}}"></image>
+    </view>
+    <view bindtap="takephoto" class="takephoto">
+        <image class="album" src="/pages/images/album.png"></image>
+    传图/配框
+  </view>
+    <view bindtap="open" class="zanshang">
+        <image class="zan" src="/pages/images/zan.png"></image>
+    赞赏开发者
+  </view>
+    <view bindtap="about_us" class="about_us">关于本小程序</view>
+</view>

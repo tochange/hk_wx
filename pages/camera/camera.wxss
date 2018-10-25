@@ -1,0 +1,93 @@
+page {
+    background: #000000;
+}
+
+.bottom {
+    width: 100%;
+    height: 192rpx;
+    position: fixed;
+    bottom: 0;
+}
+
+.bottom1 {
+    width: 100%;
+    height: 192rpx;
+    position: relative;
+}
+
+.bottom_middle {
+    position: absolute;
+    width: 120rpx;
+    height: 120rpx;
+    left: 308rpx;
+    top: 34rpx;
+}
+
+.bottom_left {
+    position: absolute;
+    width: 68rpx;
+    height: 68rpx;
+    left: 74rpx;
+    top: 52rpx;
+}
+
+.bottom_left_word {
+    position: absolute;
+    left: 84rpx;
+    top: 122rpx;
+    color: #ffffff;
+    font-size: 24rpx;
+}
+
+.bottom_right_word {
+    position: absolute;
+    right: 84rpx;
+    top: 124rpx;
+    color: #ffffff;
+    font-size: 24rpx;
+}
+
+.bottom_right {
+    position: absolute;
+    right: 78rpx;
+    top: 56rpx;
+    color: #ffffff;
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.line {
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    width: 1px;
+    background: #979797;
+    left: 232rpx;
+}
+
+.line1 {
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    width: 1px;
+    background: #979797;
+    left: 494rpx;
+}
+
+.line2 {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 290rpx;
+    height: 1px;
+    background: #979797;
+}
+
+.line3 {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 618rpx;
+    height: 1px;
+    background: #979797;
+}

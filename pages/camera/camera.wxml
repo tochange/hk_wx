@@ -1,0 +1,15 @@
+<camera binderror="error" class="camera_box" devicePosition="{{device_position}}" flash="off" style="width: 100%; height: {{height}}rpx;margin-top:70rpx;">
+    <cover-view class="line"></cover-view>
+    <cover-view class="line1"></cover-view>
+    <cover-view class="line2"></cover-view>
+    <cover-view class="line3"></cover-view>
+</camera>
+<view class="bottom">
+    <view class="bottom1">
+        <image bindtap="choosePhoto" class="bottom_left" src="./../images/6.png"></image>
+        <view class="bottom_left_word">选画</view>
+        <image bindtap="takePhoto" class="bottom_middle" src="./../images/5.png"></image>
+        <image bindtap="reverse" class="bottom_right" src="./../images/7.png"></image>
+        <view class="bottom_right_word">翻转</view>
+    </view>
+</view>

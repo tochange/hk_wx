@@ -1,0 +1,315 @@
+page {
+    min-height: 100%;
+    background: #000;
+}
+
+.page_box {
+    width: 100%;
+    height: 100%;
+}
+
+.photoWrap_canvas {
+    position: absolute;
+    width: 300px;
+    left: 365px;
+    height: 400px;
+}
+
+.header_box {
+    width: 100%;
+    overflow: hidden;
+}
+
+.foot_box {
+    width: 100%;
+    height: 152px;
+    position: fixed;
+    bottom: 56px;
+    display: none;
+}
+
+.foot_box.checked {
+    display: block;
+}
+
+.foot_box_up {
+    width: 100%;
+    height: 57px;
+    background: #1a2d27;
+}
+
+.type_word {
+    display: inline-block;
+    color: #fff;
+    width: 69px;
+    height: 57px;
+    line-height: 57px;
+    text-align: center;
+    background: #1a2d27;
+    font-size: 14px;
+    position: relative;
+}
+
+.new {
+    position: absolute;
+    right: 0rpx;
+    top: 20rpx;
+    width: 34rpx;
+    height: 18rpx;
+}
+
+.type_checked text {
+    padding-bottom: 3rpx;
+    border-bottom: 2rpx solid #fff;
+}
+
+.foot_box_down {
+    width: 100%;
+    height: 95px;
+    background: #09110f;
+}
+
+.type_down_word {
+    display: inline-block;
+    width: 69px;
+    height: 86px;
+    line-height: 93px;
+    background: #09110f;
+    position: relative;
+}
+
+.check_border {
+    border: 3px solid #8da8a1;
+}
+
+.type_down_img {
+    width: 75rpx;
+    height: 78rpx;
+    position: absolute;
+    top: 56rpx;
+    left: 34rpx;
+}
+
+.checked {
+    background: #09110f;
+}
+
+.footer {
+    flex-direction: row;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 57px;
+    bottom: 0;
+    text-align: center;
+    background: #1a2d27;
+    font-size: 32rpx;
+    color: #d7dad9;
+}
+
+.flex-item {
+    width: 25%;
+    padding-top: 9px;
+}
+
+.flex-item image {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+.share {
+    border: none;
+    background: none;
+    color: #d7dad9;
+}
+
+.img_box {
+    width: 100%;
+    height: 100%;
+}
+
+.canvas_hidden {
+    display: none;
+}
+
+.canvas_show {
+    display: block!important;
+}
+
+.touch_wrapper {
+    position: relative;
+}
+
+.image_wrapper {
+    position: relative;
+    border: 5px dashed #fff;
+    padding: 15px;
+}
+
+.ctrl {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+
+.ctrl_lt {
+    left: -15px;
+    top: -15px;
+}
+
+.ctrl_rt {
+    right: -15px;
+    top: -15px;
+}
+
+.ctrl_rb {
+    right: -15px;
+    bottom: -15px;
+}
+
+.ctrl_lb {
+    left: -15px;
+    bottom: -15px;
+}
+
+.hide_ctrl {
+    border-color: transparent;
+}
+
+.hide_ctrl .ctrl {
+    display: none;
+}
+
+.font_size_12 {
+    font-size: 12px;
+}
+
+.filter_image {
+    top: 36rpx;
+}
+
+.filter_text {
+    color: #fff;
+    position: absolute;
+    width: 75rpx;
+    top: 53rpx;
+    left: 34rpx;
+    text-align: center;
+}
+
+.save {
+    width: 94px;
+    height: 57px;
+    line-height: 48px;
+    background: rgba(0,99,68,1);
+    text-align: center;
+    border-radius: 0;
+}
+
+.save_box {
+    width: 53px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.save_text {
+    font-size: 16px;
+    font-family: PingFangSC-Regular;
+    color: rgba(254,254,254,1);
+    float: left;
+    margin-top: -5px;
+    padding-left: 5px;
+}
+
+.save image {
+    width: 16px;
+    height: 16px;
+    margin-top: 12px;
+}
+
+.slider_bar {
+    width: 90%;
+    position: relative;
+}
+
+.slider_bar slider {
+    z-index: 99;
+}
+
+.slider_dots {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    width: 91%;
+    top: 50%;
+    margin-top: -6px;
+    padding-left: 18px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider_dots image {
+    width: 12px;
+    height: 12px;
+}
+
+.slider_value {
+    width: 10%;
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    color: rgba(254,254,254,1);
+    line-height: 38px;
+}
+
+.add-custom-scene {
+    display: inline-block;
+    width: 69px;
+    height: 90px;
+    background: #00170f;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+.add-custom-scene image {
+    width: 65rpx;
+    height: 65rpx;
+    position: absolute;
+    top: 30rpx;
+    left: 38rpx;
+}
+
+.add-custom-scene text {
+    display: block;
+    width: 65rpx;
+    position: absolute;
+    top: 116rpx;
+    left: 25rpx;
+}
+
+.custom-scene-none {
+    height: 86px;
+    line-height: 86px;
+    position: relative;
+    margin-left: 69px;
+    margin-top: -86px;
+    color: #3c5c51;
+    text-align: center;
+    background: #00170f;
+    font-size: 28rpx;
+}
+
+.delete-scene {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 20px;
+    right: 2px;
+}
+
+.scene-img {
+    top: 40rpx;
+    left: 28rpx;
+}

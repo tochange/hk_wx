@@ -1,0 +1,4 @@
+<icon class="icon-box-img" size="73" type="info"></icon>
+<view class="tips">为了更好的体验，此应用需要获取你的昵称和头像等基本信息</view>
+<button bindgetuserinfo="userinfo" class="sure" openType="getUserInfo" type="primary">确认授权</button>
+<view class="tips2" hidden="{{ishide}}">请再次点击确认授权登录</view>

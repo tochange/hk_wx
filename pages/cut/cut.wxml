@@ -1,0 +1,2 @@
+<import src="/vendor/welCropper/welCropper.wxml"></import>
+<template is="welCropper" data="{{cropperData:cropperData,cropperMovableItems:cropperMovableItems,cropperChangableData:cropperChangableData}}"></template>

@@ -1,0 +1,113 @@
+<view bindtap="hideDeleteCtrl" class="page_box" style="height:{{systeminfo.windowHeight}}px;">
+    <view bindtap="hideCtrl" class="header_box" style="background-color:{{bg_color}};background-image:url({{current_bg_img}}); height:{{img_box_height}}px;background-size:100% 100%;">
+        <view class="touch_wrapper" style="transform: scale({{item.scale}});top:{{item.top}}px;left:{{item.left}}px; ">
+            <view class="image_wrapper {{item.show?'canvas_show':''}} {{item.active?'':'hide_ctrl'}}" data-ctrl="true" style="transform: rotate({{item.angle}}deg);width:{{item.width}}px;">
+                <image animation="{{animationData}}" bindtouchmove="wrapperTouchMove" bindtouchstart="wrapperTouchStart" class="img_box" data-ctrl="true" src="{{cut_img_addframe}}" style="width:{{item.width}}px;height:{{item.height}}px;"></image>
+                <image class="ctrl ctrl_lt" src="../images/icon/close.png" style="transform: scale({{item.oScale}});transform-origin:center;"></image>
+                <image bindtouchmove="ctrlTouchMove" bindtouchstart="ctrlTouchStart" class="ctrl ctrl_rt" src="../images/icon/resize_ew.png" style="transform: scale({{item.oScale}});transform-origin:center;"></image>
+                <image bindtouchmove="ctrlTouchMove" bindtouchstart="ctrlTouchStart" class="ctrl ctrl_rb" src="../images/icon/resize_sn.png" style="transform: scale({{item.oScale}});transform-origin:center;"></image>
+                <image bindtouchmove="ctrlTouchMove" bindtouchstart="ctrlTouchStart" class="ctrl ctrl_lb" src="../images/icon/resize_ew.png" style="transform: scale({{item.oScale}});transform-origin:center;"></image>
+            </view>
+        </view>
+    </view>
+    <canvas canvasId="firstCanvas" style="position:absolute;width: {{width}}px; height: {{height}}px;top:-{{height*10}}px;"></canvas>
+    <canvas canvasId="shareCanvas" style="width: {{systeminfo.windowWidth*3}}px; height: {{img_box_height*3}}px;position:absolute;top:-{{img_box_height*30}}px;"></canvas>
+    <canvas canvasId="filterCanvas" style="position:absolute;top:-{{filterCanvasHeight*10}}px;width: {{filterCanvasWidth}}px; height: {{filterCanvasHeight}}px;"></canvas>
+    <image src="{{bg_img}}" style="width: {{systeminfo.windowWidth}}px; height: {{img_box_height}}px;position:absolute;z-index:-1;top:0;"></image>
+    <view class="foot_box {{tabCheckedId==1?'checked':''}}">
+        <view class="foot_box_up">
+            <scroll-view scrollX="true" style=" white-space: nowrap; display: flex">
+                <view bindtap="chooseType" class="type_word {{item.checked?'type_checked':''}}" data-id="{{item.id}}" wx:for="{{frames}}" wx:key="{{item.id}}">
+                    <text>{{item.name}}</text>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="foot_box_down">
+            <scroll-view scrollLeft="{{scrollLeft1}}" scrollX="true" style=" white-space: nowrap; display: flex">
+                <block wx:if="{{item.checked}}" wx:for="{{frames}}" wx:key="{{item.id}}">
+                    <view class="type_down_word {{select_id==u.id?'check_border':''}}" wx:for="{{item.imgs}}" wx:for-item="u" wx:key="{{u.id}}">
+                        <image bindtap="chooseImage" class="type_down_img" data-imginfo="{{u}}" src="{{u.img_url||u.left_up_img}}"></image>
+                    </view>
+                </block>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="foot_box {{tabCheckedId==2?'checked':''}}">
+        <view class="foot_box_up">
+            <scroll-view scrollX="true" style=" white-space: nowrap; display: flex">
+                <view bindtap="chooseType" class="type_word {{item.checked?'type_checked':''}}" data-id="{{item.id}}" wx:for="{{scenes}}" wx:key="{{item.id}}">
+                    <text>{{item.name}}</text>
+                    <image class="new" src="/pages/images/new.png" wx:if="{{item.name=='自定义'}}"></image>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="foot_box_down">
+            <scroll-view scrollLeft="{{scrollLeft2}}" scrollX="true" style=" white-space: nowrap; display: flex">
+                <block wx:if="{{item.checked}}" wx:for="{{scenes}}" wx:key="{{item.id}}">
+                    <view catchtap="addUserScene" class="add-custom-scene" wx:if="{{item.custom}}">
+                        <image class="type_down_img" src="/pages/images/icon1.png"></image>
+                        <text>传图/拍照</text>
+                    </view>
+                    <view class="custom-scene-none" wx:if="{{item.custom&&item.imgs.length==0}}">
+              请上传或拍照你想要的场景图
+            </view>
+                    <view bindtouchend="timestampEnd" bindtouchstart="timestampStart" catchtap="chooseImage" class="type_down_word {{select_sid==u.id?'check_border':''}}" data-imginfo="{{u}}" wx:for="{{item.imgs}}" wx:for-item="u" wx:key="{{u.id}}">
+                        <image class="type_down_img scene_img" src="{{u.left_up_img||u.sm_img_url||u.img_url}}"></image>
+                        <image catchtap="deleteUserScene" class="delete-scene" src="/pages/images/icon/close1.png" wx:if="{{deleteSceneId==u.id}}"></image>
+                    </view>
+                </block>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="foot_box {{tabCheckedId==3?'checked':''}}">
+        <view class="foot_box_up">
+            <view style="padding-top:7px;flex-direction:row;display:{{select_fid==3?'flex':'none'}}">
+                <view class="slider_bar">
+                    <view class="slider_dots">
+                        <image catch:tap="setBrightnessValue" data-value="-15" src="/pages/images/oval@2x.png"></image>
+                        <image catch:tap="setBrightnessValue" data-value="-10" src="/pages/images/oval@2x.png"></image>
+                        <image catch:tap="setBrightnessValue" data-value="-5" src="/pages/images/oval@2x.png"></image>
+                        <image catch:tap="setBrightnessValue" data-value="0" src="/pages/images/oval@2x.png"></image>
+                        <image catch:tap="setBrightnessValue" data-value="5" src="/pages/images/oval@2x.png"></image>
+                        <image catch:tap="setBrightnessValue" data-value="10" src="/pages/images/oval@2x.png"></image>
+                        <image catch:tap="setBrightnessValue" data-value="15" src="/pages/images/oval@2x.png"></image>
+                    </view>
+                    <slider activeColor="#979797" backgroundColor="#979797" bindchange="brightnessChange" max="15" min="-15" step="5" value="{{brightnessValue}}"></slider>
+                </view>
+                <text class="slider_value">{{brightnessValue}}</text>
+            </view>
+        </view>
+        <view class="foot_box_down">
+            <scroll-view scrollX="true" style="white-space: nowrap; display: flex">
+                <block wx:if="{{item.checked}}" wx:for="{{filters}}" wx:key="{{item.id}}">
+                    <view bindtap="chooseImage" class="type_down_word {{select_fid==u.id?'check_border':''}}" data-imginfo="{{u}}" wx:for="{{item.imgs}}" wx:for-item="u" wx:key="{{u.id}}">
+                        <image class="type_down_img filter_image" src="{{u.img_url}}"></image>
+                        <text class="filter_text">{{u.text}}</text>
+                    </view>
+                </block>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="footer">
+        <view bindtap="chooseTab" class="flex-item {{tabCheckedId==1?'checked':''}}" data-id="1">
+            <image src="/pages/images/icon/toolbar_1.png"></image>
+            <text class="about_title_text font_size_12">画框</text>
+        </view>
+        <view bindtap="chooseTab" class="flex-item {{tabCheckedId==2?'checked':''}}" data-id="2">
+            <image src="/pages/images/icon/toolbar_2.png"></image>
+            <text class="about_title_text font_size_12">场景</text>
+        </view>
+        <view bindtap="chooseTab" class="flex-item {{tabCheckedId==3?'checked':''}}" data-id="3">
+            <image src="/pages/images/icon/toolbar_3.png"></image>
+            <text class="about_title_text font_size_12">滤镜</text>
+        </view>
+        <form reportSubmit bindsubmit="save">
+            <button class="flex-item save" data-id="4" formType="submit">
+                <view class="save_box">
+                    <text class="save_text">保存</text>
+                    <image src="/pages/images/icon/toolbar_4.png"></image>
+                </view>
+            </button>
+        </form>
+    </view>
+</view>
